@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LexScholar - Perpustakaan jurnal pribadi dan ruang akademik mahasiswa hukum.">
+  <title>LexScholar | Perpustakaan Akademik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">⚖</span>
+      <span><strong>LexScholar</strong><small>JOURNAL LIBRARY</small></span>
+    </a>
+    <div class="side-label">MENU UTAMA</div>
+    <nav class="side-nav">
+      <a class="nav-link active" href="index.html"><span>⌂</span> Beranda</a>
+      <a class="nav-link" href="#koleksi"><span>▤</span> Koleksi Jurnal</a>
+      <a class="nav-link" href="#upload"><span>⇧</span> Upload Jurnal</a>
+      <a class="nav-link" href="portfolio.html"><span>▣</span> Portofolio Saya <b class="nav-arrow">↗</b></a>
+      <a class="nav-link" href="#tentang"><span>♙</span> Tentang LexScholar</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="side-rule"></div>
+      <div class="sidebar-note"><span>✦</span><p>Ruang untuk menyimpan pengetahuan dan menumbuhkan pemikiran hukum.</p></div>
+      <div class="sidebar-user"><div class="avatar">RF</div><div><b id="sideName">Rio Ferdiansyah</b><small>Mahasiswa Ilmu Hukum</small></div></div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Buka menu">☰</button>
+      <div class="breadcrumb"><span>LexScholar</span><i>/</i><b>Beranda</b></div>
+      <div class="top-actions">
+        <label class="search-wrap"><span>⌕</span><input type="search" id="globalSearch" placeholder="Cari judul, penulis, kategori..."></label>
+        <a class="profile-chip" href="portfolio.html"><span class="avatar">RF</span><b>Rio Ferdiansyah</b><span>↗</span></a>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="eyebrow"><span></span> PERPUSTAKAAN AKADEMIK PRIBADI</div>
+          <h1>Pengetahuan adalah<br><em>fondasi keadilan.</em></h1>
+          <p>Kelola referensi, jelajahi pemikiran hukum, dan dokumentasikan perjalanan akademik Saya dalam satu ruang.</p>
+          <div class="hero-actions"><a class="primary-btn" href="#koleksi">Jelajahi Koleksi <span>→</span></a><a class="hero-link" href="portfolio.html">Lihat portofolio ↗</a></div>
+        </div>
+        <div class="hero-art"><div class="seal-ring"><span>⚖</span><small>LEX SCHOLAR<br>KNOWLEDGE • JUSTICE</small></div><div class="hero-caption">LEARN · RESEARCH · GROW</div></div>
+        <div class="hero-number">01 <span>/ 04</span></div>
+      </section>
+
+      <section class="welcome-row">
+        <div><div class="section-kicker">DASHBOARD</div><h2>Selamat datang kembali.</h2><p>Berikut ringkasan perpustakaan akademik Saya.</p></div>
+        <div class="date-pill"><span>◷</span> Ruang belajar pribadi</div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Total koleksi</span><span class="stat-icon">▤</span></div><strong id="totalJurnal">0</strong><small>Jurnal tersimpan</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Diunggah tahun ini</span><span class="stat-icon">⇧</span></div><strong id="uploadedYear">0</strong><small>Dokumen baru</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Kategori</span><span class="stat-icon">▦</span></div><strong id="totalKategori">0</strong><small>Bidang kajian</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Portofolio</span><span class="stat-icon">♙</span></div><strong>01</strong><small><a href="portfolio.html">Lihat profil ↗</a></small></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel journal-panel" id="koleksi">
+          <div class="panel-heading"><div><div class="section-kicker">ARSIP AKADEMIK</div><h2>Koleksi jurnal</h2></div><span class="collection-count" id="collectionCount">0 dokumen</span></div>
+          <div class="filter-row"><span>Jurnal terbaru</span><button class="filter-btn" id="clearSearch">Atur ulang ×</button></div>
+          <div id="journalList" class="journal-list"></div>
+          <div id="emptyState" class="empty-state"><div class="empty-icon">▤</div><b>Belum ada jurnal tersimpan</b><p>Tambahkan jurnal pertama Anda melalui formulir upload.</p><a href="#upload" class="outline-btn">Upload jurnal</a></div>
+        </article>
+        <aside class="right-column">
+          <article class="panel profile-panel">
+            <div class="section-kicker">PROFIL AKADEMIK</div><div class="profile-avatar">RF</div>
+            <h3 id="miniName">Rio Ferdiansyah</h3><p>Mahasiswa Ilmu Hukum</p>
+            <div class="profile-tags"><span>Hukum Tata Negara</span><span>Hukum Siber</span></div>
+            <a href="portfolio.html" class="profile-link">Kunjungi portofolio <span>↗</span></a>
+          </article>
+          <article class="quote-panel"><span>“</span><p>Hukum bukan sekadar aturan, melainkan jalan untuk menjaga martabat dan keadilan manusia.</p><small>CATATAN AKADEMIK</small></article>
+        </aside>
+      </section>
+
+      <section class="panel upload-panel" id="upload">
+        <div class="panel-heading"><div><div class="section-kicker">TAMBAHKAN REFERENSI</div><h2>Upload jurnal baru</h2><p class="panel-subtitle">Simpan dokumen penelitian ke perpustakaan pribadi Anda.</p></div><span class="pdf-badge">PDF · Maks. 25 MB</span></div>
+        <form id="journalForm" class="upload-form">
+          <div class="form-grid">
+            <label>Judul jurnal<input id="title" type="text" placeholder="Contoh: Dinamika Hukum Tata Negara..." required></label>
+            <label>Nama penulis<input id="author" type="text" placeholder="Nama penulis jurnal" required></label>
+            <label>Tahun terbit<input id="year" type="number" min="1900" max="2100" placeholder="2026" required></label>
+            <label>Kategori<select id="category" required><option value="">Pilih kategori</option><option>Hukum Pidana</option><option>Hukum Perdata</option><option>Hukum Tata Negara</option><option>Hukum Siber</option><option>Hukum Internasional</option><option>Teknologi</option><option>Lainnya</option></select></label>
+            <label class="full-width">Abstrak / catatan singkat<textarea id="abstract" rows="3" placeholder="Tuliskan ringkasan singkat jurnal (opsional)"></textarea></label>
+            <label class="full-width file-drop"> <span class="upload-symbol">⇧</span><b>Pilih dokumen PDF</b><small id="fileHint">Klik untuk memilih file dari perangkat Anda · Maksimal 25 MB</small><input id="pdfFile" type="file" accept="application/pdf,.pdf" required></label>
+          </div>
+          <div class="form-footer"><p id="formMessage" class="form-message" role="status"></p><button class="primary-btn" type="submit">Simpan ke perpustakaan <span>↑</span></button></div>
+        </form>
+      </section>
+
+      <section class="about-strip" id="tentang"><div><div class="section-kicker">TENTANG LEXSCHOLAR</div><h2>Satu ruang untuk perjalanan intelektual.</h2><p>LexScholar adalah perpustakaan akademik pribadi yang dirancang untuk membantu mahasiswa hukum menyimpan referensi, mengelola bacaan, dan membangun rekam jejak akademik.</p></div><a href="portfolio.html" class="outline-btn">Kenali pemilik situs ↗</a></section>
+    </div>
+    <footer class="footer"><b>⚖ LexScholar</b><span>Ilmu Hukum, untuk masa depan yang lebih adil.</span><small>© <span id="currentYear"></span> LexScholar</small></footer>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
